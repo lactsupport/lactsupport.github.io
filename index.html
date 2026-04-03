@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who to Call for Breastfeeding Support — Scope of Practice Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --doula:    #6B4FAE;
+    --doula-lt: #EEEDFE;
+    --doula-bd: #AFA9EC;
+    --doula-dk: #3C3489;
+    --clc:      #0F6E56;
+    --clc-lt:   #E1F5EE;
+    --clc-bd:   #5DCAA5;
+    --clc-dk:   #085041;
+    --ibclc:    #185FA5;
+    --ibclc-lt: #E6F1FB;
+    --ibclc-bd: #85B7EB;
+    --ibclc-dk: #0C447C;
+    --bflm:     #993556;
+    --bflm-lt:  #FBEAF0;
+    --bflm-bd:  #ED93B1;
+    --bflm-dk:  #72243E;
+    --text:     #1a1a18;
+    --text-sec: #5c5b56;
+    --text-ter: #9c9a92;
+    --bg:       #faf9f6;
+    --bg-sec:   #f0efe9;
+    --bg-card:  #ffffff;
+    --border:   rgba(0,0,0,0.11);
+    --border-lt: rgba(0,0,0,0.07);
+    --warn-bg:  #FAEEDA;
+    --warn-bd:  #EF9F27;
+    --warn-txt: #412402;
+    --warn-tag-bg: #FAEEDA;
+    --warn-tag-txt: #633806;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text:     #e8e6df;
+      --text-sec: #a8a69f;
+      --text-ter: #6e6d68;
+      --bg:       #181816;
+      --bg-sec:   #222220;
+      --bg-card:  #1e1e1c;
+      --border:   rgba(255,255,255,0.10);
+      --border-lt: rgba(255,255,255,0.06);
+      --doula-lt: #23205a;
+      --doula-dk: #CECBF6;
+      --doula-bd: #534AB7;
+      --clc-lt:   #04302a;
+      --clc-dk:   #9FE1CB;
+      --clc-bd:   #0F6E56;
+      --ibclc-lt: #04284d;
+      --ibclc-dk: #B5D4F4;
+      --ibclc-bd: #185FA5;
+      --bflm-lt:  #481426;
+      --bflm-dk:  #F4C0D1;
+      --bflm-bd:  #993556;
+      --warn-bg:  #3a1f02;
+      --warn-bd:  #854F0B;
+      --warn-txt: #FAC775;
+      --warn-tag-bg: #3a1f02;
+      --warn-tag-txt: #FAC775;
+    }
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  /* ── Page shell ── */
+  .page-wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  /* ── Header ── */
+  .page-header {
+    margin-bottom: 1.75rem;
+  }
+  .header-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .page-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+  .page-sub {
+    font-size: 13px;
+    color: var(--text-sec);
+    max-width: 580px;
+    line-height: 1.5;
+  }
+  .print-btn {
+    flex-shrink: 0;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 6px 14px;
+    font-size: 12px;
+    color: var(--text-sec);
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .print-btn:hover { background: var(--bg-sec); }
+
+  /* ── Alert banner ── */
+  .escalation-note {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-bd);
+    border-radius: 10px;
+    padding: 11px 15px;
+    margin-bottom: 1.5rem;
+    font-size: 12.5px;
+    color: var(--warn-txt);
+    line-height: 1.55;
+  }
+  .escalation-note strong { font-weight: 600; }
+
+  /* ════════════════════════════
+     DESKTOP GRID (≥ 780px)
+  ════════════════════════════ */
+  .provider-row {
+    display: grid;
+    grid-template-columns: 160px repeat(4, 1fr);
+    gap: 5px;
+    margin-bottom: 5px;
+    align-items: stretch;
+  }
+
+  .provider-head {
+    border-radius: 10px;
+    padding: 13px 10px 11px;
+    text-align: center;
+  }
+  .provider-head .abbr { font-size: 14px; font-weight: 600; }
+  .provider-head .role { font-size: 10px; margin-top: 3px; opacity: .85; line-height: 1.3; }
+  .provider-head .cert { font-size: 9.5px; margin-top: 8px; background: rgba(0,0,0,.1); border-radius: 4px; padding: 2px 6px; display: inline-block; }
+
+  .ph-doula { background: var(--doula-lt); color: var(--doula-dk); border: 1px solid var(--doula-bd); }
+  .ph-clc   { background: var(--clc-lt);   color: var(--clc-dk);   border: 1px solid var(--clc-bd); }
+  .ph-ibclc { background: var(--ibclc-lt); color: var(--ibclc-dk); border: 1px solid var(--ibclc-bd); }
+  .ph-bflm  { background: var(--bflm-lt);  color: var(--bflm-dk);  border: 1px solid var(--bflm-bd); }
+
+  .concern-label {
+    background: var(--bg-sec);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .concern-name { font-size: 11.5px; font-weight: 600; color: var(--text); }
+  .concern-sub  { font-size: 10px; color: var(--text-sec); margin-top: 2px; line-height: 1.3; }
+
+  .cell {
+    border-radius: 8px;
+    padding: 9px 9px 8px;
+    font-size: 10.5px;
+    border: 1px solid var(--border-lt);
+    background: var(--bg-card);
+  }
+  .cell .can { font-weight: 600; font-size: 10.5px; margin-bottom: 4px; color: var(--text); }
+  .cell ul { list-style: none; }
+  .cell ul li {
+    padding-left: 10px;
+    position: relative;
+    color: var(--text-sec);
+    margin-bottom: 2px;
+    line-height: 1.35;
+  }
+  .cell ul li::before { content: '·'; position: absolute; left: 2px; color: var(--text-ter); }
+  .cell .limit {
+    font-size: 9.5px;
+    margin-top: 5px;
+    border-top: 1px solid var(--border-lt);
+    padding-top: 4px;
+    color: var(--text-ter);
+    font-style: italic;
+  }
+  .cell.none {
+    background: var(--bg-sec);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cell.none span { color: var(--text-ter); font-size: 10px; }
+
+  .cell-doula { border-left: 3px solid var(--doula-bd); }
+  .cell-clc   { border-left: 3px solid var(--clc-bd); }
+  .cell-ibclc { border-left: 3px solid var(--ibclc-bd); }
+  .cell-bflm  { border-left: 3px solid var(--bflm-bd); }
+
+  .escalate {
+    display: inline-block;
+    font-size: 9px;
+    background: var(--warn-tag-bg);
+    color: var(--warn-tag-txt);
+    border-radius: 3px;
+    padding: 1px 5px;
+    margin-top: 4px;
+  }
+
+  /* ════════════════════════════
+     MOBILE (< 780px) — Accordion
+  ════════════════════════════ */
+  .mobile-concern { display: none; }
+
+  @media (max-width: 779px) {
+    .provider-row { display: none !important; }
+    .mobile-concern { display: block; margin-bottom: 8px; }
+
+    .accordion-trigger {
+      width: 100%;
+      background: var(--bg-sec);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 13px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      text-align: left;
+      gap: 10px;
+      transition: background 0.15s;
+    }
+    .accordion-trigger:hover { background: var(--border-lt); }
+    .accordion-trigger[aria-expanded="true"] {
+      border-radius: 10px 10px 0 0;
+      border-bottom-color: transparent;
+    }
+    .acc-label { flex: 1; }
+    .acc-concern-name { font-size: 13px; font-weight: 600; color: var(--text); }
+    .acc-concern-sub  { font-size: 11px; color: var(--text-sec); margin-top: 2px; line-height: 1.35; }
+    .acc-chevron {
+      flex-shrink: 0;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.25s, background 0.15s;
+      font-size: 11px;
+      color: var(--text-ter);
+    }
+    .accordion-trigger[aria-expanded="true"] .acc-chevron {
+      transform: rotate(180deg);
+      background: var(--bg-card);
+    }
+
+    .accordion-panel {
+      display: none;
+      border: 1px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      overflow: hidden;
+    }
+    .accordion-panel.open { display: block; }
+
+    .mobile-provider-section {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-lt);
+    }
+    .mobile-provider-section:last-child { border-bottom: none; }
+
+    .mobile-provider-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .mobile-provider-dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .mobile-provider-name {
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .mobile-provider-role {
+      font-size: 10px;
+      color: var(--text-sec);
+      margin-left: auto;
+    }
+
+    .mobile-provider-section.m-doula { background: var(--bg-card); border-left: 3px solid var(--doula-bd); }
+    .mobile-provider-section.m-clc   { background: var(--bg-card); border-left: 3px solid var(--clc-bd); }
+    .mobile-provider-section.m-ibclc { background: var(--bg-card); border-left: 3px solid var(--ibclc-bd); }
+    .mobile-provider-section.m-bflm  { background: var(--bg-card); border-left: 3px solid var(--bflm-bd); }
+    .mobile-provider-section.m-none  { background: var(--bg-sec); }
+
+    .mobile-provider-section .can { font-weight: 600; font-size: 11px; color: var(--text); margin-bottom: 5px; }
+    .mobile-provider-section ul { list-style: none; }
+    .mobile-provider-section ul li {
+      padding-left: 11px;
+      position: relative;
+      color: var(--text-sec);
+      font-size: 11px;
+      margin-bottom: 3px;
+      line-height: 1.4;
+    }
+    .mobile-provider-section ul li::before { content: '·'; position: absolute; left: 2px; color: var(--text-ter); }
+    .mobile-provider-section .limit {
+      font-size: 10px;
+      margin-top: 5px;
+      border-top: 1px solid var(--border-lt);
+      padding-top: 4px;
+      color: var(--text-ter);
+      font-style: italic;
+    }
+    .mobile-provider-section .escalate { font-size: 10px; }
+    .mobile-provider-section .none-label { font-size: 11px; color: var(--text-ter); }
+
+    .mobile-provider-name.c-doula { color: var(--doula-dk); }
+    .mobile-provider-name.c-clc   { color: var(--clc-dk); }
+    .mobile-provider-name.c-ibclc { color: var(--ibclc-dk); }
+    .mobile-provider-name.c-bflm  { color: var(--bflm-dk); }
+  }
+
+  /* ── Scope key ── */
+  .scope-key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-lt);
+  }
+  .scope-key .kitem { display: flex; align-items: flex-start; gap: 8px; flex: 1 1 210px; }
+  .scope-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 3px; }
+  .scope-key .kname { font-size: 11.5px; font-weight: 600; color: var(--text); }
+  .scope-key .kdesc { font-size: 11px; color: var(--text-sec); line-height: 1.45; margin-top: 2px; }
+
+  /* ── Resources ── */
+  .resources {
+    margin-top: 1.75rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--bg-sec);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .resources-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  .resource-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 12px 13px;
+    text-decoration: none;
+    display: block;
+    transition: box-shadow 0.15s, border-color 0.15s;
+  }
+  .resource-card:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+    border-color: var(--ibclc-bd);
+  }
+  .resource-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ibclc);
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .resource-name svg {
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+  .resource-desc {
+    font-size: 11px;
+    color: var(--text-sec);
+    line-height: 1.4;
+  }
+
+  /* ── Sources ── */
+  .source {
+    font-size: 10px;
+    color: var(--text-ter);
+    margin-top: 1.5rem;
+    line-height: 1.7;
+    border-top: 1px solid var(--border-lt);
+    padding-top: 1rem;
+  }
+
+  /* ── Print ── */
+  @media print {
+    body { background: white; font-size: 11px; }
+    .page-wrap { padding: 0.5rem; max-width: 100%; }
+    .page-title { font-size: 16px; }
+    .no-print, .print-btn { display: none !important; }
+    .mobile-concern { display: none !important; }
+    .provider-row { display: grid !important; }
+    @page { size: landscape; margin: 1.2cm; }
+    .resource-card { border: 1px solid #ccc; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="header-top">
+      <div>
+        <div class="page-title">Who to call for breastfeeding support</div>
+        <div class="page-sub">Scope of practice guide for parents · Different providers have different training and authority — use this to find the right help faster.</div>
+      </div>
+      <button class="print-btn no-print" onclick="window.print()">🖨 Print / Save PDF</button>
+    </div>
+  </div>
+
+  <div class="escalation-note">
+    <strong>Important:</strong> Providers at each level can refer you up. Your CLC or IBCLC may recommend you see a physician if they identify a concern that requires diagnosis or prescription treatment. When in doubt, contact whoever you can reach first — escalation is a feature, not a failure.
+  </div>
+
+  <!-- ══════════════════════════════════════
+       DESKTOP GRID
+  ══════════════════════════════════════ -->
+
+  <!-- Header row -->
+  <div class="provider-row" style="align-items:end; margin-bottom:8px;">
+    <div></div>
+    <div class="provider-head ph-doula">
+      <div class="abbr">Doula</div>
+      <div class="role">Birth &amp; postpartum support specialist</div>
+      <div class="cert">Varies by certifying org</div>
+    </div>
+    <div class="provider-head ph-clc">
+      <div class="abbr">CLC</div>
+      <div class="role">Certified Lactation Counselor</div>
+      <div class="cert">~45 hrs training</div>
+    </div>
+    <div class="provider-head ph-ibclc">
+      <div class="abbr">IBCLC</div>
+      <div class="role">Int'l Board Certified Lactation Consultant</div>
+      <div class="cert">1,000+ hrs clinical + exam</div>
+    </div>
+    <div class="provider-head ph-bflm">
+      <div class="abbr">BFLM Clinician</div>
+      <div class="role">Breastfeeding / Lactation Medicine Physician</div>
+      <div class="cert">MD/DO + ABM training</div>
+    </div>
+  </div>
+
+  <!-- Latch -->
+  <div class="provider-row">
+    <div class="concern-label">
+      <div class="concern-name">Latch &amp; positioning</div>
+      <div class="concern-sub">Pain, shallow latch, clicking sounds, poor transfer</div>
+    </div>
+    <div class="cell cell-doula">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Emotional support &amp; encouragement</li>
+        <li>Discussing norms around early and often nursing</li>
+        <li>Basic positioning tips (cradle, football, side-lying)</li>
+        <li>Suggest lactation referral</li>
+      </ul>
+      <div class="limit">Cannot assess latch clinically</div>
+    </div>
+    <div class="cell cell-clc">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Observe &amp; assess latch quality</li>
+        <li>Correct positioning hands-on</li>
+        <li>Teach asymmetric latch techniques</li>
+        <li>Nipple shield guidance</li>
+      </ul>
+      <div class="limit">Cannot diagnose anatomical cause</div>
+    </div>
+    <div class="cell cell-ibclc">
+      <div class="can">Best first call</div>
+      <ul>
+        <li>Full clinical latch assessment</li>
+        <li>Identify oral movement restriction concerns</li>
+        <li>Suck assessment tools</li>
+        <li>Weighted feeds to measure transfer</li>
+      </ul>
+      <span class="escalate">↑ Refer to BFLM if tie suspected</span>
+    </div>
+    <div class="cell cell-bflm">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Full assessment of both lactating parent and infant</li>
+        <li>Diagnose ankyloglossia</li>
+        <li>Frenotomy procedure or referral</li>
+        <li>Rule out oral-motor or other issues</li>
+        <li>Coordinate with SLP / dentist and lactation team</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Milk supply -->
+  <div class="provider-row">
+    <div class="concern-label">
+      <div class="concern-name">Milk supply concerns</div>
+      <div class="concern-sub">Low supply, oversupply, pump output worries</div>
+    </div>
+    <div class="cell cell-doula">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Normalize supply variations</li>
+        <li>Encourage feeding on demand</li>
+        <li>Skin-to-skin support</li>
+      </ul>
+      <div class="limit">Cannot assess actual output</div>
+    </div>
+    <div class="cell cell-clc">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Feeding frequency &amp; scheduling guidance</li>
+        <li>Pumping techniques &amp; flange fit</li>
+        <li>Review infant weight gain with parent</li>
+      </ul>
+      <span class="escalate">↑ Refer to IBCLC if concern persists</span>
+    </div>
+    <div class="cell cell-ibclc">
+      <div class="can">Best first call</div>
+      <ul>
+        <li>Weighted feeds (before &amp; after scale)</li>
+        <li>24-hr intake assessment</li>
+        <li>Oversupply / hyperlactation plans</li>
+        <li>Start a galactagogue discussion (non-Rx)</li>
+      </ul>
+      <span class="escalate">↑ Refer to BFLM for Rx galactagogues</span>
+    </div>
+    <div class="cell cell-bflm">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Diagnose hormonal causes (thyroid, prolactin)</li>
+        <li>Prescribe galactagogue medications or supplements</li>
+        <li>Evaluate for medical reasons for supply concerns such as retained placental fragments</li>
+        <li>Assess breast hypoplasia / IGT</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Nipple pain -->
+  <div class="provider-row">
+    <div class="concern-label">
+      <div class="concern-name">Nipple pain &amp; damage</div>
+      <div class="concern-sub">Soreness, cracking, blistering, bleeding</div>
+    </div>
+    <div class="cell cell-doula">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Emotional reassurance</li>
+        <li>Suggest nipple creams</li>
+        <li>Recommend lactation support visit</li>
+      </ul>
+      <div class="limit">Cannot assess cause</div>
+    </div>
+    <div class="cell cell-clc">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Assess latch as root cause</li>
+        <li>Nipple shield fitting</li>
+        <li>Moist wound healing guidance</li>
+      </ul>
+      <span class="escalate">↑ Refer to IBCLC or BFLM if persistent</span>
+    </div>
+    <div class="cell cell-ibclc">
+      <div class="can">Best first call</div>
+      <ul>
+        <li>Comprehensive cause assessment</li>
+        <li>Identify Raynaud's vasospasm pattern</li>
+        <li>Pumping alternatives during healing</li>
+        <li>Start conservative management techniques for wound healing</li>
+      </ul>
+      <span class="escalate">↑ Refer to BFLM if infection suspected</span>
+    </div>
+    <div class="cell cell-bflm">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Diagnose &amp; treat dermatitis or other causes</li>
+        <li>Prescribe APNO / topical antifungals</li>
+        <li>Diagnose or treat vasospasm or neurogenic pain</li>
+        <li>Wound care for severe damage</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Engorgement -->
+  <div class="provider-row">
+    <div class="concern-label">
+      <div class="concern-name">Engorgement &amp; plugged ducts</div>
+      <div class="concern-sub">Hard, overfull breasts; localized tender lumps</div>
+    </div>
+    <div class="cell cell-doula">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Cold compress guidance</li>
+        <li>Recommend against factors that may worsen such as massage</li>
+        <li>Frequent feeding reminders</li>
+      </ul>
+    </div>
+    <div class="cell cell-clc">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Hand expression and reverse pressure softening technique</li>
+        <li>Normalize early engorgement and assess further</li>
+        <li>Pumping &amp; feeding schedule adjustments</li>
+      </ul>
+    </div>
+    <div class="cell cell-ibclc">
+      <div class="can">Best first call</div>
+      <ul>
+        <li>Recommend conservative management with cold compress, OTC anti-inflammatories</li>
+        <li>Dangle feeding / positioning for drainage and recommending against massage</li>
+        <li>Assess for early mastitis signs</li>
+        <li>Plan for prevention with assessment of risk factors</li>
+      </ul>
+      <span class="escalate">↑ Refer to BFLM if fever or red streak</span>
+    </div>
+    <div class="cell cell-bflm">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Diagnose mastitis vs. abscess</li>
+        <li>Prescribe antibiotics</li>
+        <li>Ultrasound / abscess drainage referral</li>
+        <li>Recurrent plug workup</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Mastitis -->
+  <div class="provider-row">
+    <div class="concern-label">
+      <div class="concern-name">Mastitis</div>
+      <div class="concern-sub">Breast redness, warmth, fever, flu-like symptoms</div>
+    </div>
+    <div class="cell cell-doula">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Encourage rest &amp; hydration</li>
+        <li>Emotional support</li>
+        <li>Urge prompt care-seeking</li>
+      </ul>
+      <div class="limit">Urgent: recommend provider contact</div>
+    </div>
+    <div class="cell cell-clc">
+      <div class="can">Supportive role</div>
+      <ul>
+        <li>Effective milk removal guidance</li>
+        <li>Positioning to drain affected area</li>
+      </ul>
+      <div class="limit">Cannot diagnose or prescribe</div>
+      <span class="escalate">↑ Always refer to IBCLC + BFLM</span>
+    </div>
+    <div class="cell cell-ibclc">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Assess for clinical mastitis presentation</li>
+        <li>Optimize milk removal plan</li>
+        <li>Support continuing to breastfeed</li>
+        <li>Recommend physician contact urgently</li>
+      </ul>
+      <span class="escalate">↑ Must refer to BFLM / PCP for antibiotics</span>
+    </div>
+    <div class="cell cell-bflm">
+      <div class="can">Primary role</div>
+      <ul>
+        <li>Diagnose lactational mastitis</li>
+        <li>Prescribe appropriate antibiotics</li>
+        <li>Rule out abscess (ultrasound if needed)</li>
+        <li>Manage inflammatory mastitis (non-infectious)</li>
+        <li>Follow up to resolution</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- D-MER -->
+  <div class="provider-row">
+    <div class="concern-label">
+      <div class="concern-name">Postpartum mood &amp; D-MER</div>
+      <div class="concern-sub">Low mood with letdown; anxiety; feeling dread while nursing</div>
+    </div>
+    <div class="cell cell-doula">
+      <div class="can">Important role</div>
+      <ul>
+        <li>Emotional check-ins &amp; listening</li>
+        <li>Normalize mood fluctuations</li>
+        <li>Encourage help-seeking</li>
+      </ul>
+    </div>
+    <div class="cell cell-clc">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Recognize D-MER pattern</li>
+        <li>Provide educational resources</li>
+        <li>Validate experience, reduce shame</li>
+      </ul>
+      <span class="escalate">↑ Refer to IBCLC or BFLM for D-MER</span>
+    </div>
+    <div class="cell cell-ibclc">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Clinical recognition of D-MER</li>
+        <li>Screen for PPD / PPA overlap</li>
+        <li>Education on dopamine mechanism</li>
+      </ul>
+      <span class="escalate">↑ Refer to BFLM / MH provider for treatment</span>
+    </div>
+    <div class="cell cell-bflm">
+      <div class="can">Primary role</div>
+      <ul>
+        <li>Diagnose D-MER or PPA/PPD/PMADs</li>
+        <li>Medication management if indicated</li>
+        <li>Coordinate with OB, MFM, psychiatry</li>
+        <li>Medication safety in lactation counseling</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Medication -->
+  <div class="provider-row">
+    <div class="concern-label">
+      <div class="concern-name">Medication &amp; substance safety</div>
+      <div class="concern-sub">"Can I take X while breastfeeding?"</div>
+    </div>
+    <div class="cell none"><span>Not in scope</span></div>
+    <div class="cell none"><span>Not in scope</span></div>
+    <div class="cell cell-ibclc">
+      <div class="can">Can help</div>
+      <ul>
+        <li>Reference LactMed / Hale's databases</li>
+        <li>General drug safety education</li>
+        <li>Advise consult with prescriber</li>
+      </ul>
+      <div class="limit">Cannot advise on Rx changes</div>
+    </div>
+    <div class="cell cell-bflm">
+      <div class="can">Primary role</div>
+      <ul>
+        <li>Full lactation pharmacology evaluation</li>
+        <li>Adjust or substitute medications</li>
+        <li>Counsel on pumping-and-dumping specifics</li>
+        <li>Substance use support during lactation</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       MOBILE ACCORDION (hidden on desktop)
+  ══════════════════════════════════════ -->
+
+  <!-- Helper macro via JS-generated sections below -->
+
+  <div class="mobile-concern" id="m-latch">
+    <button class="accordion-trigger" aria-expanded="false" aria-controls="m-latch-panel" onclick="toggleAccordion(this)">
+      <div class="acc-label">
+        <div class="acc-concern-name">Latch &amp; positioning</div>
+        <div class="acc-concern-sub">Pain, shallow latch, clicking sounds, poor transfer</div>
+      </div>
+      <div class="acc-chevron">▾</div>
+    </button>
+    <div class="accordion-panel" id="m-latch-panel">
+      <div class="mobile-provider-section m-doula">
+        <div class="mobile-provider-header">
+          <div class="mobile-provider-dot" style="background:var(--doula)"></div>
+          <div class="mobile-provider-name c-doula">Doula</div>
+          <div class="mobile-provider-role">Support</div>
+        </div>
+        <div class="can">Can help</div>
+        <ul><li>Emotional support &amp; encouragement</li><li>Discussing norms around early and often nursing</li><li>Basic positioning tips (cradle, football, side-lying)</li><li>Suggest lactation referral</li></ul>
+        <div class="limit">Cannot assess latch clinically</div>
+      </div>
+      <div class="mobile-provider-section m-clc">
+        <div class="mobile-provider-header">
+          <div class="mobile-provider-dot" style="background:var(--clc)"></div>
+          <div class="mobile-provider-name c-clc">CLC</div>
+          <div class="mobile-provider-role">Certified Lactation Counselor</div>
+        </div>
+        <div class="can">Can help</div>
+        <ul><li>Observe &amp; assess latch quality</li><li>Correct positioning hands-on</li><li>Teach asymmetric latch techniques</li><li>Nipple shield guidance</li></ul>
+        <div class="limit">Cannot diagnose anatomical cause</div>
+      </div>
+      <div class="mobile-provider-section m-ibclc">
+        <div class="mobile-provider-header">
+          <div class="mobile-provider-dot" style="background:var(--ibclc)"></div>
+          <div class="mobile-provider-name c-ibclc">IBCLC</div>
+          <div class="mobile-provider-role">Best first call</div>
+        </div>
+        <div class="can">Best first call</div>
+        <ul><li>Full clinical latch assessment</li><li>Identify oral movement restriction concerns</li><li>Suck assessment tools</li><li>Weighted feeds to measure transfer</li></ul>
+        <span class="escalate">↑ Refer to BFLM if tie suspected</span>
+      </div>
+      <div class="mobile-provider-section m-bflm">
+        <div class="mobile-provider-header">
+          <div class="mobile-provider-dot" style="background:var(--bflm)"></div>
+          <div class="mobile-provider-name c-bflm">BFLM Clinician</div>
+          <div class="mobile-provider-role">Lactation Medicine</div>
+        </div>
+        <div class="can">Can help</div>
+        <ul><li>Full assessment of both lactating parent and infant</li><li>Diagnose ankyloglossia</li><li>Frenotomy procedure or referral</li><li>Rule out oral-motor or other issues</li><li>Coordinate with SLP / dentist and lactation team</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-concern" id="m-supply">
+    <button class="accordion-trigger" aria-expanded="false" aria-controls="m-supply-panel" onclick="toggleAccordion(this)">
+      <div class="acc-label">
+        <div class="acc-concern-name">Milk supply concerns</div>
+        <div class="acc-concern-sub">Low supply, oversupply, pump output worries</div>
+      </div>
+      <div class="acc-chevron">▾</div>
+    </button>
+    <div class="accordion-panel" id="m-supply-panel">
+      <div class="mobile-provider-section m-doula">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--doula)"></div><div class="mobile-provider-name c-doula">Doula</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Normalize supply variations</li><li>Encourage feeding on demand</li><li>Skin-to-skin support</li></ul>
+        <div class="limit">Cannot assess actual output</div>
+      </div>
+      <div class="mobile-provider-section m-clc">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--clc)"></div><div class="mobile-provider-name c-clc">CLC</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Feeding frequency &amp; scheduling guidance</li><li>Pumping techniques &amp; flange fit</li><li>Review infant weight gain with parent</li></ul>
+        <span class="escalate">↑ Refer to IBCLC if concern persists</span>
+      </div>
+      <div class="mobile-provider-section m-ibclc">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--ibclc)"></div><div class="mobile-provider-name c-ibclc">IBCLC</div></div>
+        <div class="can">Best first call</div>
+        <ul><li>Weighted feeds (before &amp; after scale)</li><li>24-hr intake assessment</li><li>Oversupply / hyperlactation plans</li><li>Start a galactagogue discussion (non-Rx)</li></ul>
+        <span class="escalate">↑ Refer to BFLM for Rx galactagogues</span>
+      </div>
+      <div class="mobile-provider-section m-bflm">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--bflm)"></div><div class="mobile-provider-name c-bflm">BFLM Clinician</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Diagnose hormonal causes (thyroid, prolactin)</li><li>Prescribe galactagogue medications or supplements</li><li>Evaluate for medical reasons for supply concerns such as retained placental fragments</li><li>Assess breast hypoplasia / IGT</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-concern" id="m-nipple">
+    <button class="accordion-trigger" aria-expanded="false" aria-controls="m-nipple-panel" onclick="toggleAccordion(this)">
+      <div class="acc-label">
+        <div class="acc-concern-name">Nipple pain &amp; damage</div>
+        <div class="acc-concern-sub">Soreness, cracking, blistering, bleeding</div>
+      </div>
+      <div class="acc-chevron">▾</div>
+    </button>
+    <div class="accordion-panel" id="m-nipple-panel">
+      <div class="mobile-provider-section m-doula">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--doula)"></div><div class="mobile-provider-name c-doula">Doula</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Emotional reassurance</li><li>Suggest nipple creams</li><li>Recommend lactation support visit</li></ul>
+        <div class="limit">Cannot assess cause</div>
+      </div>
+      <div class="mobile-provider-section m-clc">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--clc)"></div><div class="mobile-provider-name c-clc">CLC</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Assess latch as root cause</li><li>Nipple shield fitting</li><li>Moist wound healing guidance</li></ul>
+        <span class="escalate">↑ Refer to IBCLC or BFLM if persistent</span>
+      </div>
+      <div class="mobile-provider-section m-ibclc">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--ibclc)"></div><div class="mobile-provider-name c-ibclc">IBCLC</div></div>
+        <div class="can">Best first call</div>
+        <ul><li>Comprehensive cause assessment</li><li>Identify Raynaud's vasospasm pattern</li><li>Pumping alternatives during healing</li><li>Start conservative management techniques for wound healing</li></ul>
+        <span class="escalate">↑ Refer to BFLM if infection suspected</span>
+      </div>
+      <div class="mobile-provider-section m-bflm">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--bflm)"></div><div class="mobile-provider-name c-bflm">BFLM Clinician</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Diagnose &amp; treat dermatitis or other causes</li><li>Prescribe APNO / topical antifungals</li><li>Diagnose or treat vasospasm or neurogenic pain</li><li>Wound care for severe damage</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-concern" id="m-engorgement">
+    <button class="accordion-trigger" aria-expanded="false" aria-controls="m-engorgement-panel" onclick="toggleAccordion(this)">
+      <div class="acc-label">
+        <div class="acc-concern-name">Engorgement &amp; plugged ducts</div>
+        <div class="acc-concern-sub">Hard, overfull breasts; localized tender lumps</div>
+      </div>
+      <div class="acc-chevron">▾</div>
+    </button>
+    <div class="accordion-panel" id="m-engorgement-panel">
+      <div class="mobile-provider-section m-doula">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--doula)"></div><div class="mobile-provider-name c-doula">Doula</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Cold compress guidance</li><li>Recommend against factors that may worsen such as massage</li><li>Frequent feeding reminders</li></ul>
+      </div>
+      <div class="mobile-provider-section m-clc">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--clc)"></div><div class="mobile-provider-name c-clc">CLC</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Hand expression and reverse pressure softening technique</li><li>Normalize early engorgement and assess further</li><li>Pumping &amp; feeding schedule adjustments</li></ul>
+      </div>
+      <div class="mobile-provider-section m-ibclc">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--ibclc)"></div><div class="mobile-provider-name c-ibclc">IBCLC</div></div>
+        <div class="can">Best first call</div>
+        <ul><li>Recommend conservative management with cold compress, OTC anti-inflammatories</li><li>Dangle feeding / positioning for drainage and recommending against massage</li><li>Assess for early mastitis signs</li><li>Plan for prevention with assessment of risk factors</li></ul>
+        <span class="escalate">↑ Refer to BFLM if fever or red streak</span>
+      </div>
+      <div class="mobile-provider-section m-bflm">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--bflm)"></div><div class="mobile-provider-name c-bflm">BFLM Clinician</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Diagnose mastitis vs. abscess</li><li>Prescribe antibiotics</li><li>Ultrasound / abscess drainage referral</li><li>Recurrent plug workup</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-concern" id="m-mastitis">
+    <button class="accordion-trigger" aria-expanded="false" aria-controls="m-mastitis-panel" onclick="toggleAccordion(this)">
+      <div class="acc-label">
+        <div class="acc-concern-name">Mastitis</div>
+        <div class="acc-concern-sub">Breast redness, warmth, fever, flu-like symptoms</div>
+      </div>
+      <div class="acc-chevron">▾</div>
+    </button>
+    <div class="accordion-panel" id="m-mastitis-panel">
+      <div class="mobile-provider-section m-doula">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--doula)"></div><div class="mobile-provider-name c-doula">Doula</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Encourage rest &amp; hydration</li><li>Emotional support</li><li>Urge prompt care-seeking</li></ul>
+        <div class="limit">Urgent: recommend provider contact</div>
+      </div>
+      <div class="mobile-provider-section m-clc">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--clc)"></div><div class="mobile-provider-name c-clc">CLC</div></div>
+        <div class="can">Supportive role</div>
+        <ul><li>Effective milk removal guidance</li><li>Positioning to drain affected area</li></ul>
+        <div class="limit">Cannot diagnose or prescribe</div>
+        <span class="escalate">↑ Always refer to IBCLC + BFLM</span>
+      </div>
+      <div class="mobile-provider-section m-ibclc">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--ibclc)"></div><div class="mobile-provider-name c-ibclc">IBCLC</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Assess for clinical mastitis presentation</li><li>Optimize milk removal plan</li><li>Support continuing to breastfeed</li><li>Recommend physician contact urgently</li></ul>
+        <span class="escalate">↑ Must refer to BFLM / PCP for antibiotics</span>
+      </div>
+      <div class="mobile-provider-section m-bflm">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--bflm)"></div><div class="mobile-provider-name c-bflm">BFLM Clinician</div></div>
+        <div class="can">Primary role</div>
+        <ul><li>Diagnose lactational mastitis</li><li>Prescribe appropriate antibiotics</li><li>Rule out abscess (ultrasound if needed)</li><li>Manage inflammatory mastitis (non-infectious)</li><li>Follow up to resolution</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-concern" id="m-dmer">
+    <button class="accordion-trigger" aria-expanded="false" aria-controls="m-dmer-panel" onclick="toggleAccordion(this)">
+      <div class="acc-label">
+        <div class="acc-concern-name">Postpartum mood &amp; D-MER</div>
+        <div class="acc-concern-sub">Low mood with letdown; anxiety; feeling dread while nursing</div>
+      </div>
+      <div class="acc-chevron">▾</div>
+    </button>
+    <div class="accordion-panel" id="m-dmer-panel">
+      <div class="mobile-provider-section m-doula">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--doula)"></div><div class="mobile-provider-name c-doula">Doula</div></div>
+        <div class="can">Important role</div>
+        <ul><li>Emotional check-ins &amp; listening</li><li>Normalize mood fluctuations</li><li>Encourage help-seeking</li></ul>
+      </div>
+      <div class="mobile-provider-section m-clc">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--clc)"></div><div class="mobile-provider-name c-clc">CLC</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Recognize D-MER pattern</li><li>Provide educational resources</li><li>Validate experience, reduce shame</li></ul>
+        <span class="escalate">↑ Refer to IBCLC or BFLM for D-MER</span>
+      </div>
+      <div class="mobile-provider-section m-ibclc">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--ibclc)"></div><div class="mobile-provider-name c-ibclc">IBCLC</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Clinical recognition of D-MER</li><li>Screen for PPD / PPA overlap</li><li>Education on dopamine mechanism</li></ul>
+        <span class="escalate">↑ Refer to BFLM / MH provider for treatment</span>
+      </div>
+      <div class="mobile-provider-section m-bflm">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--bflm)"></div><div class="mobile-provider-name c-bflm">BFLM Clinician</div></div>
+        <div class="can">Primary role</div>
+        <ul><li>Diagnose D-MER or PPA/PPD/PMADs</li><li>Medication management if indicated</li><li>Coordinate with OB, MFM, psychiatry</li><li>Medication safety in lactation counseling</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-concern" id="m-meds">
+    <button class="accordion-trigger" aria-expanded="false" aria-controls="m-meds-panel" onclick="toggleAccordion(this)">
+      <div class="acc-label">
+        <div class="acc-concern-name">Medication &amp; substance safety</div>
+        <div class="acc-concern-sub">"Can I take X while breastfeeding?"</div>
+      </div>
+      <div class="acc-chevron">▾</div>
+    </button>
+    <div class="accordion-panel" id="m-meds-panel">
+      <div class="mobile-provider-section m-none">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--doula)"></div><div class="mobile-provider-name c-doula">Doula</div></div>
+        <span class="none-label">Not in scope</span>
+      </div>
+      <div class="mobile-provider-section m-none">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--clc)"></div><div class="mobile-provider-name c-clc">CLC</div></div>
+        <span class="none-label">Not in scope</span>
+      </div>
+      <div class="mobile-provider-section m-ibclc">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--ibclc)"></div><div class="mobile-provider-name c-ibclc">IBCLC</div></div>
+        <div class="can">Can help</div>
+        <ul><li>Reference LactMed / Hale's databases</li><li>General drug safety education</li><li>Advise consult with prescriber</li></ul>
+        <div class="limit">Cannot advise on Rx changes</div>
+      </div>
+      <div class="mobile-provider-section m-bflm">
+        <div class="mobile-provider-header"><div class="mobile-provider-dot" style="background:var(--bflm)"></div><div class="mobile-provider-name c-bflm">BFLM Clinician</div></div>
+        <div class="can">Primary role</div>
+        <ul><li>Full lactation pharmacology evaluation</li><li>Adjust or substitute medications</li><li>Counsel on pumping-and-dumping specifics</li><li>Substance use support during lactation</li></ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── Scope key ── -->
+  <div class="scope-key">
+    <div class="kitem">
+      <div class="scope-dot" style="background:#6B4FAE"></div>
+      <div>
+        <div class="kname">Doula</div>
+        <div class="kdesc">Emotional, practical, &amp; informational support. No clinical assessment or diagnosis. Vital for confidence-building &amp; early problem identification.</div>
+      </div>
+    </div>
+    <div class="kitem">
+      <div class="scope-dot" style="background:#0F6E56"></div>
+      <div>
+        <div class="kname">CLC — Certified Lactation Counselor</div>
+        <div class="kdesc">Trained in common lactation issues. Can observe, educate &amp; provide hands-on guidance. Cannot diagnose medical conditions.</div>
+      </div>
+    </div>
+    <div class="kitem">
+      <div class="scope-dot" style="background:#185FA5"></div>
+      <div>
+        <div class="kname">IBCLC — Int'l Board Certified Lactation Consultant</div>
+        <div class="kdesc">Highest lactation-specific credential. Clinical assessment, latch evaluation, milk transfer measurement. Still cannot diagnose or prescribe.</div>
+      </div>
+    </div>
+    <div class="kitem">
+      <div class="scope-dot" style="background:#993556"></div>
+      <div>
+        <div class="kname">BFLM Clinician — Breastfeeding / Lactation Medicine</div>
+        <div class="kdesc">Licensed clinician with additional lactation medicine training (ABM). Can diagnose conditions, prescribe medications, and manage complex or medical breastfeeding problems. NABBLM-C are board certified specialists. All BFLM physicians can coordinate with OB/GYN and primary care physicians or other specialists/medical team members as needed.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Resources ── -->
+  <div class="resources">
+    <div class="resources-title">Find support near you</div>
+    <div class="resources-grid">
+      <a class="resource-card" href="https://zipmilk.org" target="_blank" rel="noopener">
+        <div class="resource-name">
+          Zip Milk
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="resource-desc">Search for IBCLCs, CLCs, and lactation support providers by zip code.</div>
+      </a>
+      <a class="resource-card" href="https://lactmap.com" target="_blank" rel="noopener">
+        <div class="resource-name">
+          LactMap
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="resource-desc">Map-based locator for lactation consultants and breastfeeding support services.</div>
+      </a>
+      <a class="resource-card" href="https://llli.org" target="_blank" rel="noopener">
+        <div class="resource-name">
+          La Leche League
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="resource-desc">Peer support groups and trained Leader finder for in-person and online meetings.</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Sources ── -->
+  <div class="source">
+    <strong>Sources:</strong> Academy of Breastfeeding Medicine (ABM) Scope of Practice for Breastfeeding/Lactation Medicine; IBLCE Scope of Practice for IBCLCs (2021); Lactation Education Accreditation and Approval Review Committee (LEAARC) CLC standards; ABM Protocol #36: The Mastitis Spectrum (2022).<br>
+    <strong>Abbreviations:</strong> D-MER = Dysphoric Milk Ejection Reflex · IGT = Insufficient Glandular Tissue · PPD = Postpartum Depression · PPA = Postpartum Anxiety · PMADs = Perinatal Mood and Anxiety Disorders · MH = Mental Health · SLP = Speech-Language Pathologist · MFM = Maternal-Fetal Medicine<br>
+    This infographic is for educational purposes only and does not constitute medical advice. Please consult a qualified healthcare provider with any specific concerns.
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+  function toggleAccordion(btn) {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    const panelId = btn.getAttribute('aria-controls');
+    const panel = document.getElementById(panelId);
+    btn.setAttribute('aria-expanded', String(!expanded));
+    panel.classList.toggle('open', !expanded);
+  }
+</script>
+</body>
+</html>
